@@ -4,7 +4,7 @@
 
 using System;
 
-namespace IdentityServerHost.Quickstart.UI
+namespace Marvin.IDP.Quickstart.Account
 {
     public class AccountOptions
     {

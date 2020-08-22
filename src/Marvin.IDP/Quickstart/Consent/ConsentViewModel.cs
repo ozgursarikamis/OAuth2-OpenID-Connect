@@ -4,7 +4,7 @@
 
 using System.Collections.Generic;
 
-namespace IdentityServerHost.Quickstart.UI
+namespace Marvin.IDP.Quickstart.Consent
 {
     public class ConsentViewModel : ConsentInputModel
     {

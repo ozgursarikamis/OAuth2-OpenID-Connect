@@ -1,8 +1,9 @@
 using System;
 using IdentityServer4.Models;
+using Marvin.IDP.Quickstart.Account;
 using Microsoft.AspNetCore.Mvc;
 
-namespace IdentityServerHost.Quickstart.UI
+namespace Marvin.IDP.Quickstart
 {
     public static class Extensions
     {
