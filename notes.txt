@@ -1,2 +1,6 @@
 dotnet new -i IdentityServer4.Templates // generate template projects for IdentityServer4
+
 dotnet new is4empty -n Marvin.IDP // create Identity Provider project
+
+dotnet new is4ui -n Marvin.IDP // create IdentityServer UI project
+
