@@ -33,24 +33,26 @@ namespace ImageGallery.Client
                 client.DefaultRequestHeaders.Add(HeaderNames.Accept, "application/json");
             });
 
+
             services.AddAuthentication(options =>
                 {
                     options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
                     options.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
                 })
                 .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme)
-                .AddOpenIdConnect(CookieAuthenticationDefaults.AuthenticationScheme, options =>
+                .AddOpenIdConnect(OpenIdConnectDefaults.AuthenticationScheme, options =>
                 {
                     options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                    options.Authority = "https://localhost:44318";
+                    options.Authority = "https://localhost:44318/";
                     options.ClientId = "imagegalleryclient";
                     options.ResponseType = "code";
-                    options.UsePkce = false;
-                    //options.CallbackPath = new PathString("...");
+                    //options.UsePkce = false;
+                    //options.CallbackPath = new PathString("...")                
                     options.Scope.Add("openid");
                     options.Scope.Add("profile");
                     options.SaveTokens = true;
                     options.ClientSecret = "secret";
+                    options.GetClaimsFromUserInfoEndpoint = true;
                 });
         }
 
