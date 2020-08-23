@@ -26,12 +26,16 @@ namespace Marvin.IDP
             {
                 new Client
                 {
-                    ClientName = "Image Gallery",ClientId = "imagegalleryclient",
+                    ClientName = "Image Gallery", ClientId = "imagegalleryclient",
                     AllowedGrantTypes = GrantTypes.Code,
                     RequirePkce = true,
                     RedirectUris = new List<string>
                     {
                         "https://localhost:44389/signin-oidc"
+                    },
+                    PostLogoutRedirectUris = new List<string>
+                    {
+                        "https://localhost:44389/signin-callback-oidc"
                     },
                     AllowedScopes =
                     {
